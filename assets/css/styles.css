@@ -1,0 +1,75 @@
+html{
+    scroll-behavior: smooth;
+  }
+
+:root{
+    --pri-col: #fff;
+    --sec-col:#000;
+    --grey: #f9f9f9;
+}
+.dt{
+    --pri-col: #000;
+    --sec-col:#fff;
+    --grey: #0e0e0e;
+}
+
+body{
+    background-color: var(--pri-col);
+    color: var(--sec-col);
+}
+
+#icon{
+    width: 20px;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.ws_images{
+    padding-top: 25px;
+}
+
+#About{
+    color: var(--sec-col);
+}
+
+.gotop{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 60px;
+    right: 30px;
+  
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    color: var(--sec-col);
+    font-size: 20px;
+}
+
+.data{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 30px;
+  
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    color: var(--sec-col);
+    font-size: 20px;
+}
+
+.box{
+    border: 2px solid var(--sec-col);
+    background-color: var(--grey);
+    color: var(--sec-col);
+    min-height: 350px;
+    height: auto;
+}
+
+.footer{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--sec-col);
+}

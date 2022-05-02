@@ -1,0 +1,63 @@
+
+<html>
+    <head>
+        <title>
+            Data
+        </title>
+         <link rel="icon" href="assets/img/123w.ico" type="image/icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/data.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    </head>
+      <body>
+        <section>
+        <div class="full">
+            <h1>Contents  of  the  Contact  Form</h1>
+            <div class="tbl-header">
+            <table>
+                <thead>
+                <tr>
+                <div class="col-sm-2" id="a">Contents</div>
+                </tr>
+                </thead>
+            </table>
+            </div>
+            <div class="tbl-content">
+                <table>
+                    <tbody>
+                      <tr>
+                <td><div id="showUsers"></div></td></tr></tbody></table>
+            </div>
+        </div>
+        <script>
+          showData();
+  function showData()
+  {
+    document.getElementById("showUsers").innerHTML="";
+    let user_records=new Array();
+  user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if(user_records)
+    {
+      for(let i=0;i<user_records.length;i++)
+      {
+        let addDiv=document.createElement('div');
+    addDiv.className="row";
+    addDiv.innerHTML='<div class="Content"> <b>Name:</b><div style="padding: 5px;">'+user_records[i].name+'</div><br><b>Email:</b> <div style="padding: 5px;">'+user_records[i].email+'</div><br><b>Phone:</b> <div style="padding: 5px;">'+user_records[i].psw+'</div><br><b>Subject:</b> <div style="padding: 5px;">'+user_records[i].subject+'</div><br><b>Comment:</b> <div style="padding: 5px;">'+user_records[i].comments+'</div></div><hr>';
+    document.getElementById("showUsers").appendChild(addDiv);
+  
+      }
+    }
+    }
+            
+    $(window).on("load resize ", function() {
+    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+    $('.tbl-header').css({'padding-right':scrollWidth});
+  }).resize();
+            </script>
+        </section>
+      </body>
+      </html>

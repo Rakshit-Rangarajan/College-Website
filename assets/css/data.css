@@ -1,0 +1,105 @@
+ /* demo styles */
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+  
+  html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+  }
+  
+  body{
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23a6d5, #23d5ab);
+    background-size: 600% 600%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .full{
+    border: 2px double #23d5ab;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    width: auto;
+  }
+
+  @keyframes change{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+
+h1{
+    font-size: 50px;
+    color: blue;
+    font-family: 'Festive', cursive;
+    
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  table{
+    width:100%;
+  }
+  .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  .tbl-content{
+    height:auto;
+    width: auto;
+    overflow-x:auto;
+    margin-top: 0px;
+    border-top: 1px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  th{
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000;
+  }
+
+#a{
+  padding: 20px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+hr{
+  border: 1px solid #000;
+}
+
+.Content{
+  padding-left: 5px;
+}
